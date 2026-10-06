@@ -12,7 +12,6 @@
   "dependencies": {
     "@tailwindcss/vite": "^4.3.3",
     "approve": "^0.0.12",
-    "fsevents": "^2.3.3",
     "react": "^19.2.8",
     "react-dom": "^19.2.8",
     "react-router-dom": "^7.18.4",

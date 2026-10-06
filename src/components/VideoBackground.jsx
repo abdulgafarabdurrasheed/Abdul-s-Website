@@ -1,7 +1,7 @@
 import './VideoBackground.css';
 
 import video1 from '../assets/Clover Kingdom.mp4';
-import video2 from '../assets/Zenitsu.mp4';
+import video2 from '../assets/zenitsu.mp4';
 import video3 from '../assets/KonohaGakure.mp4';
 import video4 from '../assets/Naruto.mp4';
 import video5 from '../assets/Gojo.mp4';

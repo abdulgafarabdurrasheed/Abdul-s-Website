@@ -23,19 +23,36 @@
 }
 
 .navbar > a {
-   color: rgb(206, 190, 46);
-   text-decoration: none;
+    display: grid;
+    grid-template-columns: 40px 1fr;
+    align-items: center;
+    column-gap: 10px;
+    width: calc(100% - 24px);
+    min-height: 48px;
+    color: rgb(206, 190, 46);
+    text-decoration: none;
+    line-height: 1;
+}
+
+.navbar > a:focus-visible {
+    border-radius: 8px;
+    outline: 2px solid currentColor;
+    outline-offset: 4px;
 }
 
 .navbar--collapsed {
-    width: 56px;
+    width: 72px;
     border-radius: 0 10px 10px 0;
 }
 
 .navbar--collapsed > a {
-    visibility: hidden;
-    opacity: 0;
-    pointer-events: none;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    width: 48px;
+}
+
+.navbar--collapsed .nav-label {
+    display: none;
 }
 .chewy-regular {
   font-family: "Chewy", system-ui;
@@ -81,4 +98,19 @@
     .collapsible-icon:focus-visible {
         transform: none;
     }
+}
+
+.nav-icon {
+    display: block;
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    object-position: center;
+}
+
+.nav-icon--home,
+.nav-icon--about {
+    width: 32px;
+    height: 32px;
+    justify-self: center;
 }

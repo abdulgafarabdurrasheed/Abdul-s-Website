@@ -4,45 +4,50 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    position: relative;
-    width: 15%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 100vh;
     padding: 50px 0;
     transition: width 0.3s ease;
-    background: rgba(38, 38, 42, 0.58);
-    -webkit-backdrop-filter: blur(24px) saturate(180%);
-    backdrop-filter: blur(24px) saturate(180%);
-    border: 1px solid rgba(255, 255, 255, 0.18);
-    border-radius: 0 14px 14px 0;
-    box-shadow:
-        0 12px 30px rgba(0, 0, 0, 0.28),
-        inset 1px 0 rgba(255, 255, 255, 0.12),
-        inset -1px 0 rgba(0, 0, 0, 0.18),
-        inset 0 1px rgba(255, 255, 255, 0.1);
-    font-size: 30px;
+    background: rgba(10, 10, 10, 0.75);
+    -webkit-backdrop-filter: blur(20px) saturate(150%);
+    backdrop-filter: blur(20px) saturate(150%);
+    border-right: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 4px 0 20px rgba(0, 0, 0, 0.5);
+    font-family: "Orbitron", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
     color: rgb(1, 152, 124);
+    z-index: 50;
 }
 
 .navbar > a {
     display: grid;
-    grid-template-columns: 40px 1fr;
+    grid-template-columns: 36px 1fr;
     align-items: center;
     column-gap: 10px;
     width: calc(100% - 24px);
     min-height: 48px;
-    color: rgb(206, 190, 46);
+    color: rgba(255, 255, 255, 0.7);
     text-decoration: none;
     line-height: 1;
+    padding: 4px 0;
+    transition: color 0.2s ease;
+}
+
+.navbar > a:hover {
+    color: #fff;
 }
 
 .navbar > a:focus-visible {
-    border-radius: 8px;
-    outline: 2px solid currentColor;
+    outline: 1px solid currentColor;
     outline-offset: 4px;
 }
 
 .navbar--collapsed {
-    width: 72px;
-    border-radius: 0 10px 10px 0;
+    width: 64px;
 }
 
 .navbar--collapsed > a {
@@ -54,11 +59,13 @@
 .navbar--collapsed .nav-label {
     display: none;
 }
+
 .chewy-regular {
   font-family: "Chewy", system-ui;
   font-weight: 400;
   font-style: normal;
 }
+
 .collapsible-icon {
     position: absolute;
     top: 16px;
@@ -68,20 +75,20 @@
     padding: 4px;
     border: 0;
     background: transparent;
-    color: inherit;
-    font-size: 20px;
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 16px;
     cursor: pointer;
     transition: transform 0.3s ease, color 0.3s ease;
 }
 
 .collapsible-icon:hover,
 .collapsible-icon:focus-visible {
-    color: #9fd206;
+    color: #fff;
     transform: rotate(90deg);
 }
 
 .collapsible-icon:focus-visible {
-    outline: 2px solid currentColor;
+    outline: 1px solid currentColor;
     outline-offset: 4px;
 }
 
@@ -89,11 +96,9 @@
     .navbar {
         transition: none;
     }
-
     .collapsible-icon {
         transition: color 0.3s ease;
     }
-
     .collapsible-icon:hover,
     .collapsible-icon:focus-visible {
         transform: none;
@@ -102,15 +107,58 @@
 
 .nav-icon {
     display: block;
-    width: 40px;
-    height: 40px;
+    width: 36px;
+    height: 36px;
     object-fit: contain;
     object-position: center;
 }
 
 .nav-icon--home,
 .nav-icon--about {
-    width: 32px;
-    height: 32px;
+    width: 28px;
+    height: 28px;
     justify-self: center;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: row;
+        width: 100%;
+        height: 64px;
+        top: auto;
+        bottom: 0;
+        left: 0;
+        padding: 0 8px;
+        border-right: none;
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+        box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.5);
+        overflow-x: auto;
+        gap: 4px;
+    }
+
+    .navbar > a {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        width: auto;
+        min-height: auto;
+        min-width: 52px;
+        padding: 6px 4px;
+        font-size: 9px;
+        text-align: center;
+    }
+
+    .nav-label {
+        font-size: 9px;
+    }
+
+    .nav-icon,
+    .nav-icon--home,
+    .nav-icon--about {
+        width: 24px;
+        height: 24px;
+    }
+
+    .collapsible-icon {
+        display: none;
+    }
 }

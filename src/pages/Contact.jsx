@@ -35,8 +35,7 @@ export default function Contact() {
             </a>
 
             <a
-              href=""
-              target="_blank"
+              target=""
               rel="noreferrer"
               className="flex items-center gap-4 p-4 border border-neutral-800 hover:border-neutral-600 transition-colors group"
             >

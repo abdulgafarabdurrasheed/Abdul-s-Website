@@ -14,7 +14,7 @@ export default function Contact() {
 
           <div className="space-y-4 pt-2">
             <div className="flex items-center gap-4 p-4 border border-neutral-800 hover:border-neutral-600 transition-colors">
-              <span className="text-xl">📍</span>
+              <span className="text-xl fa-solid fa-location-dot"></span>
               <div>
                 <p className="text-xs text-neutral-500 uppercase tracking-wider font-bold">Location</p>
                 <p className="text-white text-sm">Ibadan, Oyo, Nigeria</p>
@@ -27,7 +27,7 @@ export default function Contact() {
               rel="noreferrer"
               className="flex items-center gap-4 p-4 border border-neutral-800 hover:border-neutral-600 transition-colors group"
             >
-              <span className="text-xl">💻</span>
+              <span className="text-xl fa-brands fa-github"></span>
               <div>
                 <p className="text-xs text-neutral-500 uppercase tracking-wider font-bold">GitHub</p>
                 <p className="text-white text-sm group-hover:text-neutral-300">@abdulgafarabdurrasheed</p>
@@ -35,15 +35,15 @@ export default function Contact() {
             </a>
 
             <a
-              href="https://port0f0li0.netlify.app"
+              href=""
               target="_blank"
               rel="noreferrer"
               className="flex items-center gap-4 p-4 border border-neutral-800 hover:border-neutral-600 transition-colors group"
             >
-              <span className="text-xl">🌐</span>
+              <span className="text-xl fa-regular fa-folder-open"></span>
               <div>
                 <p className="text-xs text-neutral-500 uppercase tracking-wider font-bold">Portfolio</p>
-                <p className="text-white text-sm group-hover:text-neutral-300">port0f0li0.netlify.app</p>
+                <p className="text-white text-sm group-hover:text-neutral-300"></p>
               </div>
             </a>
           </div>

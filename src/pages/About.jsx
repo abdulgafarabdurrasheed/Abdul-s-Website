@@ -18,6 +18,12 @@ export default function About() {
             Directory from scratch using Next.js, Drizzle ORM, and PostgreSQL.
           </p>
           <p>
+            I also recently picked up some interest in E-Waste recycling, 
+            turning Old/Legacy android devices into surprisingly capable 
+            servers by rooting and sometimes flashing custom linux distros
+            like PostmarketOS.
+          </p>
+          <p>
             Whether I'm writing Rust for satellite mission control or shipping
             React interfaces, my focus is always on clean, scalable,
             impactful code.

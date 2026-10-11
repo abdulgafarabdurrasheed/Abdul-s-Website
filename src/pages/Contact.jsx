@@ -9,7 +9,7 @@ export default function Contact() {
         <div className="space-y-6">
           <p className="text-base md:text-lg text-neutral-300 leading-relaxed">
             I'm always open to new projects, creative ideas, and collaboration.
-            Whether it's a Hack Club initiative, a full-stack gig, or open-source work — let's talk.
+            Whether it's a Hack Club initiative, a full-stack gig, or open-source work, let's talk.
           </p>
 
           <div className="space-y-4 pt-2">

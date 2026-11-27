@@ -1,3 +1,4 @@
+import { lazy, Suspense } from 'react';
 import { Routes, Route, useLocation } from 'react-router-dom';
 import './App.css';
 import Navbar from './components/Navbar';
@@ -9,6 +10,8 @@ import Projects from './pages/Projects';
 import Skills from './pages/Skills';
 import Contact from './pages/Contact';
 import Blog from './pages/Blog';
+
+const BlogAdmin = lazy(() => import('./pages/BlogAdmin'));
 
 function App() {
   const location = useLocation();
@@ -25,7 +28,6 @@ function App() {
         className="
           relative z-10
           ml-[200px] min-h-screen
-          overflow-y-auto
           p-6 md:p-10
           max-md:ml-0 max-md:pb-20
         "
@@ -38,6 +40,15 @@ function App() {
             <Route path="/skills" element={<Skills />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/blog" element={<Blog />} />
+            <Route
+              path="/blog/admin"
+              element={(
+                <Suspense fallback={<p className="text-sm text-neutral-400">Loading editor…</p>}>
+                  <BlogAdmin />
+                </Suspense>
+              )}
+            />
+            <Route path="/blog/:slug" element={<Blog />} />
           </Routes>
         </div>
       </div>
